@@ -70,11 +70,6 @@ function onMouseMove(e) {
 
 //Load and Update Texture
 let loader = new THREE.TextureLoader();
-loader.load( './src/images/daze.jpg', (texture)=>{
-  console.log( "load complete:", texture )
-  material.map = texture;
-  texture.needsUpdate = true;
-})
 
 //Three JS --------------------------------------------------------------------
 
@@ -86,16 +81,31 @@ const router = new Navigo('/');
 router.on('/', () => {
     rootElement.innerHTML = home
     cube.geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+    loader.load( './src/images/daze.jpg', (texture)=>{
+        console.log( "load complete:", texture )
+        material.map = texture;
+        texture.needsUpdate = true;
+      })
     animateRoute('home')
 });
 router.on('/about', () => {
     rootElement.innerHTML = about
     cube.geometry = new THREE.IcosahedronGeometry(1.1);
+    loader.load( './src/images/daze.jpg', (texture)=>{
+        console.log( "load complete:", texture )
+        material.map = texture;
+        texture.needsUpdate = true;
+      })
     animateRoute('about')
 });
 router.on('/contact', () => {
     rootElement.innerHTML = contact
     cube.geometry = new THREE.SphereGeometry(1, 100, 100);
+    loader.load( './src/images/daze.jpg', (texture)=>{
+        console.log( "load complete:", texture )
+        material.map = texture;
+        texture.needsUpdate = true;
+      })
     animateRoute('contact')
 });
 router.resolve();
