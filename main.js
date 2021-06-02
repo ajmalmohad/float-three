@@ -23,7 +23,7 @@ function init() {
     camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 1000);
     camera.position.z = 5;
     renderer = new THREE.WebGLRenderer()
-    renderer.setClearColor(0x8ee4af, 1);
+    renderer.setClearColor(0x379683, 1);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.domElement.setAttribute("id", "canvas")
     document.body.appendChild(renderer.domElement);
