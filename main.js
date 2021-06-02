@@ -126,7 +126,6 @@ function animatePage(page) {
 //GSAP  ------------------------------------------------------------------------
 
 
-
 //Event Listeners
 window.addEventListener('resize', onWindowResize);
 window.addEventListener('mousemove', (e) => { onMouseMove(e) });
