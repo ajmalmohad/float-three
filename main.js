@@ -5,14 +5,15 @@ import { contact } from './src/components/contact'
 import Navigo from 'navigo';
 import gsap from 'gsap'
 import * as THREE from 'three'
+import { CubicBezierCurve } from 'three';
 
 //Root Element
 let rootElement = document.getElementById('app')
 
 //Three JS --------------------------------------------------------------------
 //Global Vars and Initialization
-let scene, camera, renderer, geometry, material, cube;
-let mouse = {x:0,y:0}
+let scene, camera, renderer, geometry, material, cube, texture;
+let mouse = { x: 0, y: 0 }
 init();
 animate();
 
@@ -27,7 +28,7 @@ function init() {
     renderer.domElement.setAttribute("id", "canvas")
     document.body.appendChild(renderer.domElement);
 
-    var texture = new THREE.TextureLoader().load('./src/images/daze.jpg');
+    texture = new THREE.TextureLoader().load('./src/images/daze.jpg');
     geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     material = new THREE.MeshPhongMaterial({ color: 0x05386b, map: texture });
     cube = new THREE.Mesh(geometry, material);
@@ -62,8 +63,8 @@ function onWindowResize() {
 }
 
 function onMouseMove(e) {
-    mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-	mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = - (e.clientY / window.innerHeight) * 2 + 1;
 }
 
 //Three JS --------------------------------------------------------------------
@@ -75,17 +76,30 @@ function onMouseMove(e) {
 const router = new Navigo('/');
 router.on('/', () => {
     rootElement.innerHTML = home
-    cube.geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+    texture = new THREE.TextureLoader().load('./src/images/daze.jpg');
+    if (texture) {
+        cube.geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+        cube.material = new THREE.MeshPhongMaterial({ color: 0x05386b, map: texture });
+    }
     animateRoute('home')
 });
 router.on('/about', () => {
     rootElement.innerHTML = about
-    cube.geometry = new THREE.IcosahedronGeometry(1.1);
+    texture = new THREE.TextureLoader().load('./src/images/daze.jpg');
+    if (texture) {
+        cube.geometry = new THREE.IcosahedronGeometry(1.1);
+        cube.material = new THREE.MeshPhongMaterial({ color: 0x05386b, map: texture });
+    }
     animateRoute('about')
 });
 router.on('/contact', () => {
     rootElement.innerHTML = contact
-    cube.geometry =  new THREE.SphereGeometry(1,100,100);
+    texture = new THREE.TextureLoader().load('./src/images/daze.jpg');
+    if (texture) {
+        cube.geometry = new THREE.SphereGeometry(1, 100, 100);
+        cube.material = new THREE.MeshPhongMaterial({ color: 0x05386b, map: texture });
+    }
+
     animateRoute('contact')
 });
 router.resolve();
