@@ -115,19 +115,19 @@
   font-size: 26px;
 }
 #about .content .info .sec1{
-  padding: 0 40% 50px 0;
-  font-size: 18px;
+  padding: 0 35% 50px 0;
+  font-size: 20px;
   line-height: 32px;
 }
 #about .content .info .sec2{
-  padding: 0 0 50px 40%;
+  padding: 0 0 50px 35%;
   text-align: right;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 32px;
 }
 #about .content .info .sec3{
-  padding: 0 40% 50px 0;
-  font-size: 18px;
+  padding: 0 35% 50px 0;
+  font-size: 20px;
   line-height: 32px;
 }
 #about .content .info .sec3 h1{
@@ -139,11 +139,30 @@
   width:100%;
 }
 #contact .content .main{
-  padding: 12% 15% 15% 20%;
+  padding: 10% 15% 15% 20%;
   color:#edf5e1;
   line-height: 60px;
   font-size: 26px;
 }
 #contact .content .head{
   color:#05386b;
+}
+#contact .content .links{
+  font-size: 18px;
+  padding: 30px 0;
+}
+#contact .content .links h1{
+  cursor: pointer;
+  width:min-content;
+  transition:0.5s ease-out;
+  padding:10px 0 0 0;
+}
+#contact .content .links h1:hover{
+  transition:0.3s ease-in;
+  border-bottom: 1px solid #edf5e1;
+  color:#05386b;
+}
+#contact a{
+  color:#edf5e1;
+  text-decoration: none;
 }

@@ -28,10 +28,10 @@ Our primary focus is on great design with great performance. No need to worry ab
 </div>
 <div class="sec3">
 <h1>Why choose us?</h1>
-<p>. we’re easy to work with.</p>
-<p>. we’ll understand your brand.</p>
-<p>. we don’t cost the whole earth.</p>
-<p>. we’re professionals.</p>
+<p>we’re easy to work with.</p>
+<p>we’ll understand your brand.</p>
+<p>we don’t cost the whole earth.</p>
+<p>we’re professionals.</p>
 </div>
 </div>
 </div>
