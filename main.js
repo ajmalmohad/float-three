@@ -115,7 +115,7 @@ function animateCurtain() {
 function animateCurtain1() {
     let anim3 = gsap.timeline()
     anim3.to('#curtain1', { top: 0, duration: 0.8, delay: 0.1 });
-    anim3.to('#curtain1', { top: "30vh", duration: 0.8, delay: 0.7 });
+    anim3.to('#curtain1', { top: "50vh", duration: 0.8, delay: 0.7 });
 }
 
 //Page Load Animations
