@@ -62,10 +62,19 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+//Track Mouse Move
 function onMouseMove(e) {
     mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
     mouse.y = - (e.clientY / window.innerHeight) * 2 + 1;
 }
+
+//Load and Update Texture
+let loader = new THREE.TextureLoader();
+loader.load( './src/images/daze.jpg', (texture)=>{
+  console.log( "load complete:", texture )
+  material.map = texture;
+  texture.needsUpdate = true;
+})
 
 //Three JS --------------------------------------------------------------------
 

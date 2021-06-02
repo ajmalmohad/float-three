@@ -137,9 +137,12 @@
 /* Contact */
 #contact .content{
   width:100%;
+}
+#contact .content .main{
   padding: 12% 15% 15% 20%;
   color:#edf5e1;
   line-height: 60px;
+  font-size: 26px;
 }
 #contact .content .head{
   color:#05386b;
