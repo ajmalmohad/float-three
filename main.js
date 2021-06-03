@@ -5,7 +5,7 @@ import { contact } from './src/components/contact'
 import Navigo from 'navigo';
 import gsap from 'gsap'
 import * as THREE from 'three'
-import { CubicBezierCurve } from 'three';
+import daze from './src/images/daze.jpg'
 
 //Root Element
 let rootElement = document.getElementById('app')
@@ -69,7 +69,7 @@ function onMouseMove(e) {
 
 //Load and Update Texture
 let loader = new THREE.TextureLoader();
-loader.load( './src/images/daze.jpg', (texture)=>{
+loader.load( daze, (texture)=>{
   console.log( "load complete:", texture )
   material.map = texture;
   cube.material.needsUpdate = true;
