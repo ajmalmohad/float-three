@@ -69,7 +69,7 @@ function onMouseMove(e) {
 
 //Load and Update Texture
 let loader = new THREE.TextureLoader();
-loader.load( './daze.jpg', (texture)=>{
+loader.load( './src/images/daze.jpg', (texture)=>{
   console.log( "load complete:", texture )
   material.map = texture;
   cube.material.needsUpdate = true;
