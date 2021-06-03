@@ -86,18 +86,21 @@ router.on('/', () => {
     rootElement.innerHTML = home
     cube.geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     cube.geometry.needsUpdate = true;
+    cube.material.needsUpdate = true;
     animateRoute('home')
 });
 router.on('/about', () => {
     rootElement.innerHTML = about
     cube.geometry = new THREE.IcosahedronGeometry(1.1);
     cube.geometry.needsUpdate = true;
+    cube.material.needsUpdate = true;
     animateRoute('about')
 });
 router.on('/contact', () => {
     rootElement.innerHTML = contact
     cube.geometry = new THREE.SphereGeometry(1, 100, 100);
     cube.geometry.needsUpdate = true;
+    cube.material.needsUpdate = true;
     animateRoute('contact')
 });
 router.resolve();
